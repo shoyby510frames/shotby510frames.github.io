@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLAY VISUALS | Photography</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080808;color:#f5f5f5;font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1050px;margin:auto;padding:0 22px}
+nav{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #222}
+.logo{font-weight:800;letter-spacing:2px;font-size:18px}
+.navbook{border:1px solid #555;border-radius:30px;padding:11px 18px;font-size:13px}
+.hero{padding:80px 0 65px;text-align:center}
+.eyebrow{font-size:12px;letter-spacing:4px;color:#999}
+h1{font-size:clamp(44px,9vw,92px);line-height:.9;margin:18px 0;letter-spacing:-4px}
+.hero p{color:#aaa;max-width:520px;margin:0 auto 30px;line-height:1.6}
+.btn{display:inline-block;background:#fff;color:#080808;padding:15px 25px;border-radius:30px;font-weight:700;font-size:13px}
+section{padding:55px 0}
+.section-title{text-align:center;margin-bottom:30px}
+.section-title span{color:#777;font-size:11px;letter-spacing:3px}
+.section-title h2{font-size:32px;margin:8px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{border:1px solid #252525;border-radius:18px;padding:25px;background:#0d0d0d}
+.card.featured{border-color:#777}
+.card h3{margin:0;font-size:20px}
+.price{font-size:32px;font-weight:800;margin:18px 0}
+.price small{font-size:12px;color:#777;font-weight:400}
+.card p{color:#999;line-height:1.6;font-size:14px}
+.card ul{padding:0;list-style:none;color:#ccc;font-size:13px;line-height:2}
+.card li:before{content:"✓ ";color:#fff}
+.card .mini{display:inline-block;font-size:10px;letter-spacing:2px;color:#888;margin-bottom:10px}
+.group{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.info{border:1px solid #252525;border-radius:18px;padding:28px}
+.info h3{margin-top:0}
+.info p,.info li{color:#aaa;line-height:1.7;font-size:14px}
+form{max-width:700px;margin:auto;border:1px solid #252525;border-radius:20px;padding:28px;background:#0d0d0d}
+label{display:block;font-size:12px;color:#aaa;margin:17px 0 7px}
+input,select,textarea{width:100%;padding:14px;border:1px solid #333;border-radius:10px;background:#080808;color:#fff;font-size:14px}
+textarea{min-height:100px;resize:vertical}
+.submit{margin-top:22px;width:100%;border:0;cursor:pointer}
+.note{text-align:center;color:#777;font-size:12px;margin-top:14px}
+footer{border-top:1px solid #222;padding:35px 0;text-align:center;color:#777;font-size:12px;letter-spacing:1px}
+@media(max-width:750px){.grid,.group{grid-template-columns:1fr}.hero{padding-top:60px}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+<div class="logo">CLAY VISUALS</div>
+<a class="navbook" href="#booking">BOOK NOW</a>
+</nav>
+
+<header class="hero">
+<div class="eyebrow">HAYWARD • BAY AREA</div>
+<h1>CAPTURE<br>THE MOMENT.</h1>
+<p>Portraits, creative sessions, couples, groups and events — photographed with a clean, natural style.</p>
+<a class="btn" href="#booking">BOOK A SESSION</a>
+</header>
+
+<section>
+<div class="section-title"><span>PHOTOGRAPHY</span><h2>SESSION OPTIONS</h2></div>
+<div class="grid">
+<div class="card">
+<span class="mini">20 MINUTES</span><h3>Mini Session</h3>
+<div class="price">$10</div>
+<p>A quick and affordable portrait session.</p>
+<ul><li>1 location</li><li>5 edited photos</li><li>Individual portraits</li><li>Digital delivery</li></ul>
+</div>
+<div class="card featured">
+<span class="mini">1 HOUR</span><h3>Standard Session</h3>
+<div class="price">$20</div>
+<p>A simple starter session.</p>
+<ul><li>1–2 locations</li><li>12 edited photos</li><li>Outfit changes</li><li>Individual or couples</li><li>Digital delivery</li></ul>
+</div>
+<div class="card">
+<span class="mini">1 HOUR</span><h3>Premium Session</h3>
+<div class="price">$30</div>
+<p>More time for extra shots.</p>
+<ul><li>Up to 2 locations</li><li>12 edited photos</li><li>Outfit changes</li><li>Creative + portrait shots</li><li>Digital delivery</li></ul>
+</div>
+</div>
+</section>
+
+<section>
+<div class="section-title"><span>MORE OPTIONS</span><h2>GROUPS & EVENTS</h2></div>
+<div class="group">
+<div class="info"><h3>Group Session — $25</h3><p>Up to 4 people • 45 minutes • 1 location</p><ul><li>10 edited photos</li><li>Group + individual shots</li><li>Digital delivery</li><li>Additional person: +$5</li></ul></div>
+<div class="info"><h3>Events — Starting at $30</h3><p>Birthdays • Graduations • School Events • Special Events</p><p>Great for small events. Final pricing depends on event length and coverage needed.</p></div>
+</div>
+</section>
+
+<section id="booking">
+<div class="section-title"><span>LET'S WORK</span><h2>REQUEST A SESSION</h2></div>
+<form onsubmit="sendRequest(event)">
+<label>YOUR NAME</label><input id="name" required placeholder="Your name">
+<label>EMAIL OR PHONE</label><input id="contact" required placeholder="How should I contact you?">
+<label>SESSION</label>
+<select id="session"><option>Mini Session — $10</option><option>Standard Session — $20</option><option>Premium Session — $30</option><option>Group Session — $25</option><option>Event — starting at $30</option></select>
+<label>PREFERRED DATE</label><input id="date" type="date">
+<label>PREFERRED TIME</label><input id="time" type="time">
+<label>LOCATION / NOTES</label><textarea id="notes" placeholder="Tell me what you're looking for..."></textarea>
+<button class="btn submit" type="submit">SEND BOOKING REQUEST</button>
+<div class="note">This sends a booking request. Your session is confirmed after Clay Visuals responds.</div>
+</form>
+</section>
+
+<footer>© 2026 CLAY VISUALS • HAYWARD, CA • BAY AREA</footer>
+</div>
+<script>
+function sendRequest(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value;
+ const s=document.getElementById('session').value;
+ const d=document.getElementById('date').value || 'flexible';
+ const t=document.getElementById('time').value || 'flexible';
+ const c=document.getElementById('contact').value;
+ const notes=document.getElementById('notes').value;
+ const subject=encodeURIComponent('Clay Visuals Booking Request');
+ const body=encodeURIComponent(`Name: ${n}\nContact: ${c}\nSession: ${s}\nDate: ${d}\nTime: ${t}\nNotes: ${notes}`);
+ window.location.href=`mailto:?subject=${subject}&body=${body}`;
+}
+</script>
+</body>
+</html>
